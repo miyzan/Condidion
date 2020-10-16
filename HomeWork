@@ -1,0 +1,40 @@
+package com.seleniummaster.HomeWork;
+
+import java.util.Scanner;
+
+public class Week7Day1JDMSCP {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Are you marred? Please enter Yes or No");
+        String mari=input.next();
+        int mar=mari.length();
+        System.out.println("Please enter your annual salary");
+        int annual=input.nextInt();
+        if (mar==3){
+            String status="married";
+            if (annual>0&&annual<64000){
+                int taxper=10;
+                float tax= annual*taxper/100;
+                System.out.println(String.format("Your annual salary is: %d, tax filing status is: %s, tax percentage is: %d,total tax: %.2f ",annual,status,taxper,tax));
+            }
+            else {
+                int taxper=25;
+                float tax=annual*taxper/100;
+                System.out.println(String.format("Your annual salary is: %d, tax filing status is: %s, tax percentage is: %d,total tax: %.2f ",annual,status,taxper,tax));
+            }
+        }
+        else {
+            String status="single";
+            if (annual>0&&annual<32000){
+                int taxper=10;
+                float tax=annual*taxper/100;
+                System.out.println(String.format("Your annual salary is: %d, tax filing status is: %s, tax percentage is: %d,total tax: %.2f ",annual,status,taxper,tax));
+            }else {
+                int taxper=25;
+                float tax=annual*taxper/100;
+                System.out.println(String.format("Your annual salary is: %d, tax filing status is: %s, tax percentage is: %d,total tax: %.2f ",annual,status,taxper,tax));
+            }
+        }
+
+    }
+}
